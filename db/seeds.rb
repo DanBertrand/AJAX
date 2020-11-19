@@ -20,5 +20,5 @@ end
 
 
 10.times do 
-  Email.create(object: Faker::Beer.brand, body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false))
+  Email.create(object: Faker::Beer.brand, body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false), read: false)
 end

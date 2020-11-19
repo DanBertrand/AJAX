@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_092015) do
   create_table "emails", force: :cascade do |t|
     t.string "object"
     t.text "body"
+    t.boolean "read"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
