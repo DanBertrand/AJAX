@@ -1,0 +1,6 @@
+<div class="row" id="email-cell-<%= email.id%>" style="border-bottom: solid black 1px;">
+	<div class="col-md-6" id="email-object" style="border-left: solid black 2px;">
+				<%= link_to email.object, email_path(email)%>
+	</div>
+	<div class="col-md-6" id="email-content" style="border-left: solid black 2px; border-right: solid black 2px;"><%= email.body %></div>
+</div>

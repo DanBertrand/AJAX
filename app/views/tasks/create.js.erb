@@ -1,1 +1,1 @@
-document.getElementById("tasks-group").querySelector("div.card-<%=@task.category_id%> ul").insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+document.getElementById("email-table").insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
