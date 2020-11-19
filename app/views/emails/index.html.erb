@@ -13,22 +13,25 @@
 
 <div class="container" style="">
 
-	<div class="row" style="border: solid black 4px;">
+	<div id="title-table" class="row" style="border: solid black 4px;">
 		<div class="col-sm-6">Email List</div>
 		<div class="col-sm-6">Email Selected</div>
 	</div>
 
 	
-	<div id="email-table" >
-		<% @emails.each do  |email|%>
-		<div class="row" id="email-cell-<%= email.id%>" style="border-bottom: solid black 1px;">
-			<div class="col-md-6" id="email-object" style="border-left: solid black 2px;">
-				<%= link_to email.object, email_path(email)%>
+	<div class="row" id="main-table">
+		<div id="emailList" class="col-md-6" >
+			<% @emails.each do  |email|%>
+			<div class="row" id="email-cell-<%= email.id%>">
+					<%= link_to email.object, email_path(email), :method => "GET", data: { remote: true} %>
 			</div>
-			<div class="col-md-6" id="email-content" style="border-left: solid black 2px; border-right: solid black 2px;"><%= email.body %></div>
+			<%end%>
 		</div>
-		<%end%>
+		<div id="emailShow" class="col-md-6">
+	
+		</div>
 	</div>
+
 </div>
 
 
